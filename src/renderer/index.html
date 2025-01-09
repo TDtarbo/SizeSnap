@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="index.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        />
+        <script defer src="renderer.js"></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="titlebar">
+            <div class="logo">
+                <img src="../../assets/icon.png" alt="" />
+                <span>SizeSnap</span>
+            </div>
+            <div class="window-actions">
+                <button id="minimize" class="minimize">
+                    <i class="fa-solid fa-minus"></i>
+                </button>
+                <button id="maximize" class="maximize">
+                    <i class="fa-regular fa-square"></i>
+                </button>
+                <button id="close" class="close">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+        </div>
+        <div class="sections">
+            <div class="input-section" id="inputSection">
+                <div class="header">
+                    <h1>Image Resizer</h1>
+                    <p>Easily resize images.</p>
+                    <div class="img-dropzone" id="dropZone">
+                        <button id="uploadBtn">
+                            <i class="fa-solid fa-panorama"></i
+                            ><span>Select Image</span>
+                        </button>
+                    </div>
+                    <button id="scrollToOptionsBtn">Next</button>
+                </div>
+            </div>
+            <div class="options-section" id="optionsSection">
+                <h1>Image Options</h1>
+                <div class="option-inputs">
+                    <div class="input-group">
+                        <p class="label">Size</p>
+                        <div class="inputs">
+                            <input
+                                type="number"
+                                id="widthInput"
+                                placeholder="Width"
+                            />
+                            <input
+                                type="number"
+                                id="heightInput"
+                                placeholder="Height"
+                            />
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <p class="label">Output Format</p>
+                        <label class="container">png
+                            <input type="radio" checked="checked" name="radio">
+                            <span class="checkmark"></span>
+                          </label>
+                          <label class="container">jpg
+                            <input type="radio" name="radio">
+                            <span class="checkmark"></span>
+                          </label>
+                          <label class="container">bmp
+                            <input type="radio" name="radio">
+                            <span class="checkmark"></span>
+                          </label>
+                    </div>
+                    <div class="input-group">
+                        <p class="label">Output Directory</p>
+                        <div class="inputs">
+                            <input
+                                type="text"
+                                id="outputDirInput"
+                                placeholder="Output Directory"
+                                disabled
+                            />
+                            <button id="browseOutputDirBtn">Browse</button>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <button id="goBackBtn">Go Back</button>
+                        <button id="resizeBtn"><div class="loading-container"><div class="loading-circle"></div>Processing...</div></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="alert-section">
+            <div class="alert" id="alert">
+                <p id="alertText">Hellow</p>
+                <button id="closeAlertBtn"><i class="fa-solid fa-xmark">X</i></button>
+            </div>
+        </div>
+    </body>
+</html>

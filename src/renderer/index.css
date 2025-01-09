@@ -1,0 +1,359 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+html, body {
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    border: 2px solid #fda400;
+}
+
+/* Titlebar */
+.titlebar {
+    height: 35px;
+    padding-inline: 5px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    -webkit-app-region: drag;
+    box-sizing: border-box;
+}
+
+/* Window actions buttons */
+.window-actions button {
+    border: none;
+    background: none;
+    color: #1c1c1c;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+    height: 30px;
+    width: 30px;
+    -webkit-app-region: no-drag;
+}
+
+.window-actions button i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.window-actions button:hover {
+    background-color: rgba(86, 86, 86, 0.2);
+}
+
+#close:hover {
+    color: white;
+    background-color: rgba(217, 0, 0, 0.893);
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 14px;
+    color: #343434;
+}
+
+.logo img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+/* Sections */
+.sections {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+.sections > * {
+    flex: 0 0 auto;
+    width: 100vw;
+    height: 100%;
+    box-sizing: border-box;
+    border-right: 2px solid white;
+}
+
+/* Input Section */
+.input-section {
+    display: flex;
+    margin-top: 70px;
+    justify-content: center;
+}
+
+.header {
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.header h1 {
+    font-size: 24px;
+    color: #343434;
+}
+
+.header p {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #343434;
+}
+
+/* Image Dropzone */
+.img-dropzone {
+    margin-top: 30px;
+    border-radius: 20px;
+    border-style: dashed;
+    border-color: #fda400;
+    border-width: 2px;
+    width: 600px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.img-dropzone:hover {
+    background-color: #fff5e6;
+}
+
+.img-dropzone #uploadBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color: #ffffff;
+    transition: background-color 0.3s;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fda400;
+    border: none;
+    cursor: pointer;
+}
+
+.img-dropzone i {
+    margin-right: 10px;
+}
+
+/* Scroll Button */
+#scrollToOptionsBtn {
+    margin-top: 50px;
+    width: 100%;
+    font-size: 16px;
+    color: #ffffff;
+    transition: background-color 0.3s;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fda400;
+    border: none;
+    cursor: pointer;
+}
+
+#scrollToOptionsBtn:hover {
+    background-color: #e29300;
+}
+
+/* Options Section */
+.options-section {
+    display: flex;
+    margin-top: 70px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.options-section h1 {
+    font-size: 24px;
+    color: #343434;
+}
+
+.options-section .label {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #343434;
+    font-weight: 500;
+}
+
+.options-section .option-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    width: 80%;
+    margin-top: 50px;
+}
+
+.options-section input{
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #fda400;
+    font-size: 16px;
+    color: #343434;
+    font-weight: 500;
+}
+
+input[type="number"]{
+    width: 45%;
+}
+
+input[type="text"]{
+    width: 70%;
+}
+
+.options-section #browseOutputDirBtn,
+.options-section #resizeBtn,
+.options-section #goBackBtn {
+    font-size: 16px;
+    color: #ffffff;
+    transition: background-color 0.3s;
+    padding: 12px;
+    border-radius: 5px;
+    background-color: #fda400;
+    border: none;
+    cursor: pointer;
+}
+
+.options-section #browseOutputDirBtn {
+    width: 24%;
+}
+
+.options-section #resizeBtn {
+    width: 44%;
+}
+
+.options-section #goBackBtn {
+    color: #fda400;
+    background-color: #ffffff;
+    border: 1px solid #fda400;
+    width: 45%;
+    font-weight: 500;
+    margin-right: 50px;
+}
+
+.options-section .container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.options-section .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.options-section .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #e6e6e6;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.options-section .container:hover input ~ .checkmark {
+    background-color: #fda400;
+}
+
+.options-section .container input:checked ~ .checkmark {
+    background-color: #fda400;
+}
+
+.options-section .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.options-section .container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.options-section .checkmark:after {
+    top: 5px;
+    left: 5px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+/* Loading Circle */
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-circle {
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #fda400;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    animation: spin 0.5s linear infinite;
+    margin-right: 20px;
+    box-sizing: border-box;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.alert-section {
+    position: fixed;
+    bottom: 10px;
+}
+
+.alert {
+    position: relative;
+    width: 550px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #383838;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 3px solid;
+    border-color: rgb(11, 197, 64);
+}
+
+#closeAlertBtn {
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
