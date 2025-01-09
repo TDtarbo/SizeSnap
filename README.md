@@ -1,0 +1,2 @@
+# SizeSnap
+Image Resizing Tool
