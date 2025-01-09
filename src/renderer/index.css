@@ -1,9 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@font-face {
+    font-family: 'Roboto';
+    src: url('../../assets/fonts/Roboto.ttf');
+  }
 
 * {
     margin: 0;
     padding: 0;
-    font-family: "Roboto", serif;
+    font-family: 'Roboto', sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
 }
@@ -132,6 +135,7 @@ body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    overflow: hidden;
 }
 
 .img-dropzone:hover {
@@ -172,6 +176,16 @@ body {
 
 #scrollToOptionsBtn:hover {
     background-color: #e29300;
+}
+
+#uploadedImg {
+    width: 105%; /* Make the image responsive */
+    height: 105%; /* Make the image responsive */
+    object-fit: contain;
+
+    &:hover {
+        mask-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    }
 }
 
 /* Options Section */
@@ -339,15 +353,13 @@ input[type="text"]{
     width: 550px;
     padding: 20px;
     border-radius: 10px;
-    background-color: #383838;
+    background-color: #252525;
     color: #ffffff;
     font-size: 16px;
     font-weight: 500;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 3px solid;
-    border-color: rgb(11, 197, 64);
 }
 
 #closeAlertBtn {

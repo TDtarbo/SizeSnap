@@ -3,18 +3,26 @@
   "version": "1.0.0",
   "description": "Image Resizing Tool",
   "main": "./src/main.js",
-  "type": "module",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "package": "electron-packager . --platform=win32 --asar --arch=x64 --icon=assets/icon.png --overwrite"
   },
   "keywords": [],
   "author": "TDtarbo",
   "license": "MIT",
   "devDependencies": {
     "electron": "^33.3.1",
+    "electron-packager": "^17.1.2",
     "electronmon": "^2.0.3"
   },
   "dependencies": {
     "resize-img": "^2.0.0"
+  },
+  "build": {
+    "appId": "com.TDtarbo.SizeSnap",
+    "productName": "SizeSnap",
+    "win": {
+      "icon": "../../../assets/icon.png"
+    }
   }
 }

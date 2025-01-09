@@ -4,10 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="index.css" />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        />
+        <link rel="stylesheet" href="../../assets/fontAwsome/css/all.min.css" />
         <script defer src="renderer.js"></script>
         <title>Document</title>
     </head>
@@ -43,63 +40,74 @@
                     <button id="scrollToOptionsBtn">Next</button>
                 </div>
             </div>
+
+            <form id="options">
             <div class="options-section" id="optionsSection">
                 <h1>Image Options</h1>
                 <div class="option-inputs">
-                    <div class="input-group">
-                        <p class="label">Size</p>
-                        <div class="inputs">
-                            <input
-                                type="number"
-                                id="widthInput"
-                                placeholder="Width"
-                            />
-                            <input
-                                type="number"
-                                id="heightInput"
-                                placeholder="Height"
-                            />
+                        <div class="input-group">
+                            <p class="label">Size</p>
+                            <div class="inputs">
+                                <input
+                                    type="number"
+                                    id="widthInput"
+                                    placeholder="Width"
+                                    name="width"
+                                />
+                                <input
+                                    type="number"
+                                    id="heightInput"
+                                    placeholder="Height"
+                                    name="height"
+                                />
+                            </div>
                         </div>
-                    </div>
-                    <div class="input-group">
-                        <p class="label">Output Format</p>
-                        <label class="container">png
-                            <input type="radio" checked="checked" name="radio">
-                            <span class="checkmark"></span>
-                          </label>
-                          <label class="container">jpg
-                            <input type="radio" name="radio">
-                            <span class="checkmark"></span>
-                          </label>
-                          <label class="container">bmp
-                            <input type="radio" name="radio">
-                            <span class="checkmark"></span>
-                          </label>
-                    </div>
-                    <div class="input-group">
-                        <p class="label">Output Directory</p>
-                        <div class="inputs">
-                            <input
-                                type="text"
-                                id="outputDirInput"
-                                placeholder="Output Directory"
-                                disabled
-                            />
-                            <button id="browseOutputDirBtn">Browse</button>
+                        <div class="input-group">
+                            <p class="label">Output Format</p>
+                            <label class="container"
+                                >png
+                                <input
+                                    type="radio"
+                                    checked="checked"
+                                    name="format"
+                                    value="png"
+                                />
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="container"
+                                >jpg
+                                <input type="radio" name="format" value="jpg" />
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="container"
+                                >bmp
+                                <input type="radio" name="format" value="bmp" />
+                                <span class="checkmark"></span>
+                            </label>
                         </div>
-                    </div>
-                    <div class="input-group">
-                        <button id="goBackBtn">Go Back</button>
-                        <button id="resizeBtn"><div class="loading-container"><div class="loading-circle"></div>Processing...</div></button>
+                        <div class="input-group">
+                            <p class="label">Output Directory</p>
+                            <div class="inputs">
+                                <input
+                                    type="text"
+                                    id="outputDirInput"
+                                    placeholder="Output Directory"
+                                    readonly
+                                    name="output"
+                                />
+                                <button type="button" id="browseOutputDirBtn">Browse</button>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <button type="button" id="goBackBtn">Go Back</button>
+                            <button id="resizeBtn" type="submit">
+                               Resize
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </form>
         </div>
-        <div class="alert-section">
-            <div class="alert" id="alert">
-                <p id="alertText">Hellow</p>
-                <button id="closeAlertBtn"><i class="fa-solid fa-xmark">X</i></button>
-            </div>
-        </div>
+        <div class="alert-section"></div>
     </body>
 </html>

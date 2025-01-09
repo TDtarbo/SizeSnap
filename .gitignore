@@ -18,6 +18,7 @@ jspm_packages/
 # Typescript build outputs
 dist/
 build/
+sizesnap-win32-x64/
 
 # Optional npm cache directory
 .npm
@@ -31,6 +32,7 @@ build/
 # Environment variables
 .env
 .env.*.local
+.ico
 
 # IDE and Editor files
 .idea/
